@@ -1,0 +1,31 @@
+body {
+    background-image: url(/assets/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    padding: 1rem 5rem;
+}
+
+.wrap-ayat {
+    color: antiquewhite;
+    font-size: 30px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    max-width: calc(65vw - 300px);
+    min-width: 400px;
+    max-height: 40vh;
+    overflow: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30vh
+}
+span {
+    display: block;
+}
+#terjemah {
+    margin-top: 1rem;
+}
