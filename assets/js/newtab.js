@@ -38,6 +38,7 @@ function listSurah(res) {
 }
 
 function listAyat(res) {
+    $('listAyat').innerHTML = ""
     msgContainer = document.createDocumentFragment()
 
     for (var i = 1; i <= res.hasil[0].ayat; i++){
@@ -47,6 +48,7 @@ function listAyat(res) {
         }))
     }
     $('listAyat').appendChild(msgContainer)
+    $('liastAyat').value = 1
 }
 
 function ayat(res) {
@@ -56,6 +58,10 @@ function ayat(res) {
 
 
 window.onload = function() {
+
+$('listSurah').addEventListener('change',function (){
+get("https://api.banghasan.com/quran/format/json/surat/"+this.value, listAyat)
+})
 get("https://api.banghasan.com/quran/format/json/surat/1/ayat/1", ayat)
 get("https://api.banghasan.com/quran/format/json/surat", listSurah)
 get("https://api.banghasan.com/quran/format/json/surat/1", listAyat)
